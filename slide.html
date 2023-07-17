@@ -1,0 +1,189 @@
+<html>
+<head>
+<link href="lp.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+<link href="style1.css" rel="stylesheet">
+
+</head>
+
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container   'buttons'  */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* ## Next & previous buttons ## */
+.prev, .next {
+  cursor: pointer;
+  background:rgb(100,100,100);
+  position: absolute;
+  top: 50%;
+  width:auto;;
+  padding: 16px;
+  margin-top:12%;
+  margin-left:-31%;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  transition: 0.8s;
+  border-radius:200px 0px 0px 200px;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right:59%;
+  border-radius:0px 200px 200px 0px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color:black;
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 568px) 
+ {
+
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+  .prev, .next,.text {font-size: 11px}
+.prev, .next {
+  cursor: pointer;
+  background:rgb(100,100,100);
+  position: absolute;
+  top: 10%;
+  width:auto;
+  padding: 16px;
+  margin-top:35%;
+  margin-left:-85%;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  transition: 0.8s;
+  border-radius:200px 0px 0px 200px;
+  user-select: none;
+}
+
+.next {
+  right:20%;
+  border-radius:0px 200px 200px 0px;
+}
+}
+</style>
+</head>
+<body>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="bigbox">
+<div class="mon"><b>Go Bright This Monsoon</b></div>
+<div class="sml"><img src="box/22.jpg"class="i"></div>
+<div class="sml2"><img src="box/23.jpg"class="i2"></div>
+<div class="sml2"><img src="box/11.jpg"class="i2"></div>
+<div class="txt1">#Bollywood #Occasion #Trends</div>
+<small class="txt2"><b>Brand-Gucci</b></small>
+</div>
+
+</div>
+
+
+<div class="mySlides fade">
+
+<div class="bigbox">
+<div class="mon"><b>Go Bright This Monsoon</b></div>
+<div class="sml"><img src="box/2.jpg"class="i"></div>
+<div class="sml2"><img src="box/3.jpg"class="i2"></div>
+<div class="sml2"><img src="box/10.jpg"class="i2"></div>
+<div class="txt1">#Bollywood #Occasion #Trends</div>
+<small class="txt2"><b>Brand-Gucci</b></small>
+</div>
+
+</div>
+
+<div class="mySlides fade">
+  <div class="bigbox">
+<div class="mon"><b>Go Bright This Monsoon</b></div>
+<div class="sml"><img src="box/12.jpg"class="i"></div>
+<div class="sml2"><img src="box/5.jpg"class="i2"></div>
+<div class="sml2"><img src="box/21.jpg"class="i2"></div>
+<div class="txt1">#Bollywood #Occasion #Trends</div>
+<small class="txt2"><b>Brand-Gucci</b></small>
+</div>
+
+</div>
+
+<div class="mySlides fade">
+  <div class="bigbox0">
+<div class="mon0"><b>Go Bright This Monsoon</b></div>
+<div class="sml0"><img src="box/12.jpg"class="i0"></div>
+<div class="sml20"><img src="box/5.jpg"class="i20"></div>
+<div class="sml20"><img src="box/10.jpg"class="i20"></div>
+<div class="txt10">#Bollywood #Occasion #Trends</div>
+<small class="txt20"><b>Brand-Gucci</b></small>
+</div>
+
+</div>
+
+<div class="mySlides fade">
+  <div class="bigbox0">
+<div class="mon0"><b>Go Bright This Monsoon</b></div>
+<div class="sml0"><img src="box/12.jpg"class="i0"></div>
+<div class="sml20"><img src="box/5.jpg"class="i20"></div>
+<div class="sml20"><img src="box/10.jpg"class="i20"></div>
+<div class="txt10">#Bollywood #Occasion #Trends</div>
+<small class="txt20"><b>Brand-Gucci</b></small>
+</div>
+
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html> 
